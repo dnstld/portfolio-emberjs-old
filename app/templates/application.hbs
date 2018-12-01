@@ -2,17 +2,26 @@
   <div>
     <ul>
       <li>
-        {{#link-to "index"}}
+        {{#link-to 
+          "index"
+          data-test-link-to-index
+        }}
           Home
         {{/link-to}}
       </li>
       <li>
-        {{#link-to "about"}}
+        {{#link-to 
+          "about"
+          data-test-link-to-about
+        }}
           About
         {{/link-to}}
       </li>
       <li>
-        {{#link-to "contact"}}
+        {{#link-to 
+          "contact"
+          data-test-link-to-contact
+        }}
           Contact
         {{/link-to}}
       </li>
