@@ -1,5 +1,12 @@
-<ul>
-  {{#each model as |portfolioItem|}}
-    {{portfolio-item portfolio=portfolioItem}}
-  {{/each}}
-</ul>
+{{#portfolio-filter
+  filter=(action "filterPortfolio") 
+as |filteredPortfolio|
+}}
+  <ul>
+    {{#each filteredPortfolio as |portfolioItem|}}
+      {{portfolio-item portfolio=portfolioItem}}
+    {{/each}}
+  </ul>
+{{/portfolio-filter}}
+
+{{outlet}}

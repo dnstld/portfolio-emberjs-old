@@ -1,34 +1,50 @@
 export default function() {
   this.namespace = '/api';
 
-  this.get('/portfolio', function() {
-    return {
-      data: [
-        {
-          id: 'front-end',
-          title: 'Front-end development',
-          category: 'Front-end',
-          description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto est inventore, exercitationem cumque mollitia vitae ipsum, suscipit repellat facilis sint laboriosam, fugiat deleniti accusantium!',
-          imageURL: 'https://picsum.photos/300/200?image=6',
-          imageALT: 'Consequuntur architecto est inventore',
-        },
-        {
-          id: 'ux-ui',
-          title: 'UX/UI design',
-          category: 'UX/UI design',
-          description: 'Debitis repudiandae natus beatae dolorum ipsum, vero laudantium iste in? Porro, fugiat facilis.',
-          imageURL: 'https://picsum.photos/300/200?image=66',
-          imageALT: 'Consequuntur architecto est inventore',
-        },
-        {
-          id: 'graphic-design',
-          title: 'Design',
-          category: 'Graphic Design',
-          description: 'Consequuntur architecto est inventore, exercitationem cumque fugiat deleniti accusantium mollitia vitae ipsum, suscipit repellat facilis sint laboriosam!',
-          imageURL: 'https://picsum.photos/300/200?image=666',
-          imageALT: 'Suscipit repellat facilis',
-        },
-      ]
+  let portfolios = [
+    {
+      type: 'portfolio',
+      id: 'front-end',
+      attributes: {
+        title: 'Front-end development',
+        category: 'front-end',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto est inventore, exercitationem cumque mollitia vitae ipsum, suscipit repellat facilis sint laboriosam, fugiat deleniti accusantium!',
+        imageurl: 'https://picsum.photos/300/200?image=6',
+        imagealt: 'Consequuntur architecto est inventore',
+      }
+    },
+    {
+      type: 'portfolio',
+      id: 'ux-ui',
+      attributes: {
+        title: 'UX/UI design',
+        category: 'ux-ui',
+        description: 'Debitis repudiandae natus beatae dolorum ipsum, vero laudantium iste in? Porro, fugiat facilis.',
+        imageurl: 'https://picsum.photos/300/200?image=66',
+        imagealt: 'Consequuntur architecto est inventore',
+      }
+    },
+    {
+      type: 'portfolio',
+      id: 'graphic-design',
+      attributes: {
+        title: 'Design',
+        category: 'graphic-design',
+        description: 'Consequuntur architecto est inventore, exercitationem cumque fugiat deleniti accusantium mollitia vitae ipsum, suscipit repellat facilis sint laboriosam!',
+        imageurl: 'https://picsum.photos/300/200?image=666',
+        imagealt: 'Suscipit repellat facilis',
+      }
+    },
+  ];
+
+  this.get('/portfolios', (db, request) => {
+    if (request.queryParams.category !== '') {
+      let filteredPortfolio = portfolios.filter(i => {
+        return i.attributes.category.indexOf(request.queryParams.category) !== -1;
+      });
+      return { data: filteredPortfolio };
+    } else {
+      return { data: portfolios };
     }
   });
 }

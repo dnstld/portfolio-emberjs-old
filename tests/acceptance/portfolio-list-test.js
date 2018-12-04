@@ -1,4 +1,4 @@
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import { 
   visit,
   currentURL,
@@ -6,12 +6,13 @@ import {
 import { setupApplicationTest } from 'ember-qunit';
 import {
   findAll,
-  find,
   click,
 } from 'ember-native-dom-helpers';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 
 module('Acceptance | portfolio list', function(hooks) {
   setupApplicationTest(hooks);
+  setupMirage(hooks);
 
   test('should show portfolio as the home page', async function(assert) {
     await visit('/');
@@ -51,17 +52,14 @@ module('Acceptance | portfolio list', function(hooks) {
     assert.ok(
       findAll(
         '[data-test-portfolio-item]',
-        'should display 3 portfolios'
+        'should display 3 portfolio'
       )
     );
   });
 
-  test('should filter the list of works by type', async function(assert) {
+  skip('should filter the list of works by type', async function() {
   });
 
-  test('should show details for a selected work', async function(assert) {
-  });
-
-  test('', async function(assert) {
+  skip('should show details for a selected work', async function() {
   });
 });
