@@ -1,11 +1,17 @@
 <li data-test-portfolio-item>
   <img 
-    src={{portfolio.imageURL}} 
-    alt={{portfolio.imageALT}} 
+    src={{portfolio.image-url}} 
+    alt={{portfolio.image-alt}} 
     data-test-portfolio-image
   >
 
-  <h1 data-test-portfolio-title>{{portfolio.title}}</h1>
+  <h1 data-test-portfolio-title>
+    {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
+      {{portfolio.title}}
+    {{/link-to}}
+  </h1>
+
+  <span data-test-portfolio-client>{{portfolio.client}}</span>
 
   <h3 data-test-portfolio-category>
     Type: {{portfolio-type portfolio.category}} - {{portfolio.category}}

@@ -8,11 +8,12 @@ module('Integration | Component | portfolio-item', function(hooks) {
 
   hooks.before(function () {
     this.portfolio = {
-      title: 'fake-title',
-      category: 'fake-category',
-      description: 'fake-description',
-      imageURL: 'fake-imageURL',
-      imageALT: 'fake-imageALT',
+      "title": "fake-title",
+      "client": "fake-client",
+      "category": "fake-category",
+      "description": "fake-description",
+      "image-url": "fake-image-url",
+      "image-alt": "fake-image-alt",
     }
   });
 
@@ -20,9 +21,10 @@ module('Integration | Component | portfolio-item', function(hooks) {
     await render(hbs`{{portfolio-item portfolio=portfolio}}`);
 
     assert.dom('[data-test-portfolio-title]').hasText('fake-title');
+    assert.dom('[data-test-portfolio-client]').hasText('fake-client');
     assert.dom('[data-test-portfolio-category]').hasText('Type: Front-end - fake-category');
     assert.dom('[data-test-portfolio-description]').hasText('fake-description');
-    assert.dom('[data-test-portfolio-image]').hasAttribute('src', 'fake-imageURL', 'The image has src URL');
-    assert.dom('[data-test-portfolio-image]').hasAttribute('alt', 'fake-imageALT', 'The image has alt attr');
+    assert.dom('[data-test-portfolio-image]').hasAttribute('src', 'fake-image-url', 'The image has src URL');
+    assert.dom('[data-test-portfolio-image]').hasAttribute('alt', 'fake-image-alt', 'The image has alt attr');
   });
 });
