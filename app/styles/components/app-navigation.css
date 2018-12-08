@@ -1,0 +1,37 @@
+.app-navigation {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.app-navigation-menu {
+  display: flex;
+  width: 100%;
+  height: inherit;
+}
+
+.app-navigation-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.app-navigation-item.-logo {
+  margin-right: auto;
+}
+
+.app-navigation-logo {
+  height: 2rem;
+}
+
+.app-navigation-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.app-navigation-link:not(.-logo) {
+  padding: 0 .5rem;
+  margin-left: 1px;
+}

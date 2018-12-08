@@ -1,0 +1,48 @@
+<nav local-class="app-navigation">
+  <ul local-class="app-navigation-menu">
+    <li local-class="app-navigation-item -logo">
+      {{#link-to 
+        "index"
+        local-class="app-navigation-link -logo"
+        data-test-link-to-index=""
+        rel="noopener"
+      }}
+        <img 
+          src="./assets/images/logo-denis-toledo.svg" 
+          local-class="app-navigation-logo" 
+          alt="Denis's logo image"
+        >
+      {{/link-to}}
+    </li>
+    <li local-class="app-navigation-item">
+      {{#link-to 
+        "about"
+        local-class="app-navigation-link"
+        data-test-link-to-about=""
+        rel="noopener"
+      }}
+        About
+      {{/link-to}}
+    </li>
+    <li local-class="app-navigation-item">
+      {{#link-to 
+        "portfolio"
+        local-class="app-navigation-link"
+        data-test-link-to-portfolio=""
+        rel="noopener"
+      }}
+        Portfolio
+      {{/link-to}}
+    </li>
+    <li local-class="app-navigation-item">
+      {{#link-to 
+        "contact"
+        local-class="app-navigation-link"
+        data-test-link-to-contact=""
+        rel="noopener"
+      }}
+        Contact
+      {{/link-to}}
+    </li>
+  </ul>
+</nav>
