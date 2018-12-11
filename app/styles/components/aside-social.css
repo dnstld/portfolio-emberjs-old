@@ -1,11 +1,9 @@
 .aside-social {
+  composes: secondary-bg text-dark from "../composes/colors";
   display: flex;
   align-items: center;
-  color: white;
   padding-left: .5rem;
   padding-right: .5rem;
   margin-left: .5rem;
   position: relative;
-  background-color: white;
-  color: black;
 }

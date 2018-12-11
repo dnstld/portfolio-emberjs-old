@@ -2,7 +2,7 @@
   filter=(action "filterPortfolio") 
 as |filteredPortfolio|
 }}
-  <ul>
+  <ul local-class="postfolio-list">
     {{#each filteredPortfolio as |portfolioItem|}}
       {{portfolio-item portfolio=portfolioItem}}
     {{/each}}

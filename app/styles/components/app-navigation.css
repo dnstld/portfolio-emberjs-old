@@ -11,10 +11,8 @@
 }
 
 .app-navigation-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  composes: centered from "../composes/layout";
+  composes: text-light from "../composes/colors";
 }
 
 .app-navigation-item.-logo {

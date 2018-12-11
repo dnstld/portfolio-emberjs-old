@@ -1,0 +1,20 @@
+.primary-bg {
+  background-color: #24241C;
+}
+.primary-color {
+  color: #24241C;
+}
+
+.secondary-bg {
+  background-color: white;
+}
+.secondary-color {
+  color: white;
+}
+
+.text-light {
+  color: white;
+}
+.text-dark {
+  color: #24241C;
+}
