@@ -1,0 +1,14 @@
+.item {
+  display: grid;
+  grid-row-gap: 1rem;
+}
+
+.img {}
+
+.title {}
+
+.client {}
+
+.category {}
+
+.description {}

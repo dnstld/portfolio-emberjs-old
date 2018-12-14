@@ -1,35 +1,35 @@
-.app-navigation {
+.navigation {
   display: flex;
   flex: 1;
   height: 100%;
 }
 
-.app-navigation-menu {
+.menu {
   display: flex;
   width: 100%;
   height: inherit;
 }
 
-.app-navigation-item {
+.item {
   composes: centered from "../composes/layout";
   composes: text-light from "../composes/colors";
 }
 
-.app-navigation-item.-logo {
+.item.-logo {
   margin-right: auto;
 }
 
-.app-navigation-logo {
+.logo {
   height: 2rem;
 }
 
-.app-navigation-link {
+.link {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.app-navigation-link:not(.-logo) {
+.link:not(.-logo) {
   padding: 0 .5rem;
   margin-left: 1px;
 }

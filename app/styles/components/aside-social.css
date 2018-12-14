@@ -1,4 +1,4 @@
-.aside-social {
+.social {
   composes: secondary-bg text-dark from "../composes/colors";
   display: flex;
   align-items: center;

@@ -2,11 +2,9 @@
   filter=(action "filterPortfolio") 
 as |filteredPortfolio|
 }}
-  <ul local-class="postfolio-list">
+  <ul local-class="list">
     {{#each filteredPortfolio as |portfolioItem|}}
       {{portfolio-item portfolio=portfolioItem}}
     {{/each}}
   </ul>
 {{/portfolio-filter}}
-
-{{outlet}}

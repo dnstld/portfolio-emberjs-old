@@ -1,4 +1,7 @@
-<select onchange={{action "handleFilterPortfolio" value="target.value"}}>
+<select 
+  local-class="select" 
+  onchange={{action "handleFilterPortfolio" value="target.value"}}
+>
   <option selected value="all">All</option>
   <option value="front-end">Front-end</option>
   <option value="ux-ui">UX/UI Design</option>
