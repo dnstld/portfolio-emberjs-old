@@ -1,3 +1,6 @@
+@value color-secondary from "../base/colors.css";
+@value centered from "../composes/layout.css";
+
 .navigation {
   display: flex;
   flex: 1;
@@ -11,8 +14,8 @@
 }
 
 .item {
-  composes: centered from "../composes/layout";
-  composes: text-light from "../composes/colors";
+  composes: centered;
+  color: color-secondary;
 }
 
 .item.-logo {
