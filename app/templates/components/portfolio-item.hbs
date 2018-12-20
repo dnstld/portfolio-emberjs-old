@@ -3,8 +3,8 @@
   data-test-portfolio-item
 >
   <img 
-    src={{portfolio.image-url}} 
-    alt={{portfolio.image-alt}} 
+    src={{portfolio.attributes.imageUrl}} 
+    alt={{portfolio.attributes.imageAlt}} 
     local-class="img"
     data-test-portfolio-image
   >
@@ -14,7 +14,7 @@
     data-test-portfolio-title
   >
     {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
-      {{portfolio.title}}
+      {{portfolio.attributes.title}}
     {{/link-to}}
   </h1>
 
@@ -22,20 +22,20 @@
     local-class="client" 
     data-test-portfolio-client
   >
-    {{portfolio.client}}
+    {{portfolio.attributes.client}}
   </span>
 
   <h3 
     local-class="category" 
     data-test-portfolio-category
   >
-    Type: {{portfolio-type portfolio.category}} - {{portfolio.category}}
+    Type: {{portfolio-type portfolio.attributes.category}} - {{portfolio.attributes.category}}
   </h3>
 
   <span 
     local-class="description" 
     data-test-portfolio-description
   >
-    {{portfolio.description}}
+    {{portfolio.attributes.description}}
   </span>
 </li>

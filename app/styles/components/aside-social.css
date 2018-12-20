@@ -1,12 +1,19 @@
-@value color-primary, color-secondary from "../base/colors.css";
+@value color-secondary from "../base/colors.css";
 
 .social {
   display: flex;
   align-items: center;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding: .5rem 1rem;
   margin-left: .5rem;
   position: relative;
-  color: color-primary;
-  background-color: color-secondary;
+  color: color-secondary;
+}
+.social::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  top: .5rem;
+  bottom: .5rem;
+  left: 0;
+  background-color: black;
 }

@@ -3,7 +3,9 @@
   grid-row-gap: 1rem;
 }
 
-.img {}
+.img {
+  width: 100%;
+}
 
 .title {}
 

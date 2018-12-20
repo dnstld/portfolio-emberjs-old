@@ -2,6 +2,7 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const autoprefixer = require('autoprefixer');
+const postcssNesting = require('postcss-nesting');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -9,6 +10,9 @@ module.exports = function(defaults) {
       compile: {
         enabled: false,
         browsers: ['last 3 versions'], // this will override config found in config/targets.js
+        plugins: [
+          { postcssNesting }
+        ]
       },
       filter: {
         enabled: true,

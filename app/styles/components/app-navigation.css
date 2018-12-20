@@ -1,38 +1,21 @@
 @value color-secondary from "../base/colors.css";
 @value centered from "../composes/layout.css";
+@import "./postcss-nesting";
 
 .navigation {
   display: flex;
-  flex: 1;
-  height: 100%;
 }
-
 .menu {
   display: flex;
   width: 100%;
-  height: inherit;
-}
-
-.item {
-  composes: centered;
-  color: color-secondary;
-}
-
-.item.-logo {
-  margin-right: auto;
-}
-
-.logo {
-  height: 2rem;
-}
-
-.link {
-  display: flex;
-  align-items: center;
   height: 100%;
 }
-
-.link:not(.-logo) {
-  padding: 0 .5rem;
-  margin-left: 1px;
+.item {
+  color: color-secondary;
+}
+.link {
+  composes: centered;
+  height: 100%;
+  padding: 1rem .5rem;
+  box-sizing: border-box;
 }

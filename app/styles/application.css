@@ -10,15 +10,17 @@
     "main"
     "footer";
   grid-template-rows: auto 1fr 2rem;
-  overflow: hidden;
 }
 
 .header {
   grid-area: header;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: color-primary;
-  padding: .5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .main {
@@ -26,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .footer {
