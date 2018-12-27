@@ -1,11 +1,18 @@
-<select 
-  local-class="select" 
-  onchange={{action "handleFilterPortfolio" value="target.value"}}
->
-  <option selected value="all">All</option>
-  <option value="front-end">Front-end</option>
-  <option value="ux-ui">UX/UI Design</option>
-  <option value="graphic-design">Graphic Design</option>
-</select>
+<header local-class="manager">
+  <div local-class="filter">
+    <span>Sort by</span>
+    <select 
+      local-class="select" 
+      onchange={{action "handleFilterPortfolio" value="target.value"}}
+    >
+      <option selected value="all">All</option>
+      <option value="front-end">Front-end</option>
+      <option value="ux-ui">UX/UI Design</option>
+      <option value="graphic-design">Graphic Design</option>
+    </select>
+  </div>
+
+  <span local-class="total">See {{results.length}} works</span>
+</header>
 
 {{yield results}}

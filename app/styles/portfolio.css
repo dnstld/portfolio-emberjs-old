@@ -1,0 +1,44 @@
+@value txt-medium, txt-large, txt-huge from "./_base/typography.css";
+@value bp-sm, bp-lg from "./_utils/breakpoints.css";
+
+.header {
+  background-color: #f1f1f1;
+  padding: 1rem;
+
+  @media bp-sm {
+    padding: 2rem;
+  }
+  @media bp-lg {
+    padding: 3rem;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  width: 5rem;
+  margin-bottom: 1rem;
+
+  @media bp-sm {
+    width: 6rem;
+  }
+  @media bp-lg {
+    width: 7rem;
+  }
+}
+.phrase {
+  text-align: center;
+  font-weight: 300;
+  font-size: txt-medium;
+  padding: 0 1.5rem;
+
+  @media bp-sm {
+    font-size: txt-large;
+  }
+  @media bp-lg {
+    max-width: 50%;
+    font-size: txt-huge;
+  }
+}

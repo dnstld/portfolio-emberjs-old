@@ -1,0 +1,3 @@
+@value bp-sm: (min-width: 600px);
+@value bp-md: (min-width: 900px);
+@value bp-lg: (min-width: 1200px);

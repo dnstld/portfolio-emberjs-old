@@ -51,6 +51,7 @@
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "postcss-modules-values": "^2.0.0",
+    "postcss-nested": "^4.1.1",
     "qunit-dom": "^0.8.0",
     "sass": "^1.15.2"
   },

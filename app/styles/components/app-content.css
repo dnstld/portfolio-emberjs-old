@@ -1,4 +1,11 @@
+@value bp-sm from "../_utils/breakpoints.css";
+
 .content {
   max-width: 1200px;
   height: inherit;
+  margin: 0 auto;
+
+  @media bp-sm {
+    padding: 0 1.5rem;
+  }
 }

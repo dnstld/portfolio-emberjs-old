@@ -1,3 +1,29 @@
+@value txt-tiny from "../_base/typography.css";
+@value bp-sm from "../_utils/breakpoints.css";
+
+.manager {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+
+  @media bp-sm {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.filter {
+  display: flex;
+  align-items: center;
+}
 .select {
-  padding: 1rem;
+  appearance: none;
+  border-style: none;
+  background-color: transparent;
+  font-weight: 700;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+.total {
+  margin-left: auto;
+  font-size: txt-tiny;
 }

@@ -37,4 +37,17 @@ export default function(server) {
       "imageAlt": "Suscipit repellat facilis",
     }
   });
+
+  server.create('portfolio', {
+    "type": "portfolio",
+    "id": "front-end-instituto-assistir-2018-14",
+    "attributes": {
+      "title": "Front-end development",
+      "client": "Instituto Assistir",
+      "category": "front-end",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto est inventore, exercitationem cumque mollitia vitae ipsum, suscipit repellat facilis sint laboriosam, fugiat deleniti accusantium!",
+      "imageUrl": "./assets/images/portfolio-1.jpg",
+      "imageAlt": "Consequuntur architecto est inventore",
+    }
+  });
 }

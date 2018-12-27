@@ -1,12 +1,18 @@
+@value txt-minute from "./typography.css";
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+}
+
 html,
 body {
-  font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 0.0625em;
@@ -15,6 +21,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+  line-height: 120%;
 }
 
 a {
@@ -41,4 +48,8 @@ li {
 
 p {
   margin: 0;
+}
+
+small {
+  font-size: txt-minute;
 }

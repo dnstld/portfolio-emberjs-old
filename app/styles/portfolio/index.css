@@ -1,5 +1,17 @@
+@value bp-sm, bp-md, bp-lg from "../_utils/breakpoints.css";
+
 .list {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
+
+  @media bp-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media bp-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media bp-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

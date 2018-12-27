@@ -1,13 +1,13 @@
-<nav local-class="navigation">
+<AppContent>
   <ul local-class="menu">
     <li local-class="item">
       {{#link-to 
-        "index"
+        "portfolio"
         local-class="link"
-        data-test-link-to-index=""
+        data-test-link-to-portfolio=""
         rel="noopener"
       }}
-        Home
+        Portfolio
       {{/link-to}}
     </li>
     <li local-class="item">
@@ -22,16 +22,6 @@
     </li>
     <li local-class="item">
       {{#link-to 
-        "portfolio"
-        local-class="link"
-        data-test-link-to-portfolio=""
-        rel="noopener"
-      }}
-        Portfolio
-      {{/link-to}}
-    </li>
-    <li local-class="item">
-      {{#link-to 
         "contact"
         local-class="link"
         data-test-link-to-contact=""
@@ -41,4 +31,4 @@
       {{/link-to}}
     </li>
   </ul>
-</nav>
+</AppContent>

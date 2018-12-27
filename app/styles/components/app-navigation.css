@@ -1,10 +1,7 @@
-@value color-secondary from "../base/colors.css";
-@value centered from "../composes/layout.css";
+@value color-secondary from "../_base/colors.css";
+@value centered from "../_composes/layout.css";
 @import "./postcss-nesting";
 
-.navigation {
-  display: flex;
-}
 .menu {
   display: flex;
   width: 100%;
@@ -12,10 +9,25 @@
 }
 .item {
   color: color-secondary;
+
+  &:first-child .link::before {
+    display: none;
+  }
 }
 .link {
   composes: centered;
   height: 100%;
-  padding: 1rem .5rem;
+  padding: 1rem;
   box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 1px;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    bottom: 1rem;
+    background-color: black;
+  }
 }
