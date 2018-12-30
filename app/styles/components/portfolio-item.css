@@ -1,15 +1,48 @@
-.item {
-  display: grid;
-  grid-row-gap: 1rem;
-}
+@value txt-tiny, txt-small, txt-default from "../_base/typography.css";
+@value centered from "../_composes/layout.css";
 
+.header {
+  display: flex;
+  padding: 1rem;
+}
+.avatar {
+  composes: centered;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+  background-color: lightgreen;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.client {
+  font-size: txt-tiny;
+}
+.title {
+  font-size: txt-small;
+  font-weight: 400;
+}
+.tools {
+  display: flex;
+}
+.tool {
+  font-size: txt-small;
+}
 .img {
   width: 100%;
+}
+.content {
+  display: grid;
+  grid-row-gap: 1rem;
+  padding: 1rem;
 }
 
 .title {}
 
-.client {}
+
 
 .category {}
 

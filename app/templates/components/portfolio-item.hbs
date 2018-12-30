@@ -2,40 +2,66 @@
   local-class="item" 
   data-test-portfolio-item
 >
-  <img 
-    src={{portfolio.attributes.imageUrl}} 
-    alt={{portfolio.attributes.imageAlt}} 
-    local-class="img"
-    data-test-portfolio-image
-  >
+  {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
+    <header local-class="header">
 
-  <h1 
-    local-class="title" 
-    data-test-portfolio-title
-  >
-    {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
-      {{portfolio.attributes.title}}
-    {{/link-to}}
-  </h1>
+      <div local-class="avatar">
+        {{clientInitial}}
+      </div>
 
-  <span 
-    local-class="client" 
-    data-test-portfolio-client
-  >
-    {{portfolio.attributes.client}}
-  </span>
+      <div local-class="data">
+        <span 
+          local-class="client" 
+          data-test-portfolio-client
+        >
+          {{portfolio.attributes.client}}
+        </span>
 
-  <h3 
-    local-class="category" 
-    data-test-portfolio-category
-  >
-    Type: {{portfolio-type portfolio.attributes.category}} - {{portfolio.attributes.category}}
-  </h3>
+        <h1 
+          local-class="title" 
+          data-test-portfolio-title
+        >
+          {{portfolio.attributes.title}}
+        </h1>
+      </div>
+    </header>
 
-  <span 
-    local-class="description" 
-    data-test-portfolio-description
-  >
-    {{portfolio.attributes.description}}
-  </span>
+    <img 
+      src={{portfolio.attributes.imageUrl}} 
+      alt={{portfolio.attributes.imageAlt}} 
+      local-class="img"
+      data-test-portfolio-image
+    >
+
+    <div local-class="content">
+
+      <section local-class="tools">
+        {{#each portfolio.attributes.tools as |tool|}}
+          <h2 
+            local-class="tool"
+            data-test-portfolio-tools
+          >
+            {{tool}}
+          </h2>
+        {{/each}}
+      </section>
+      
+
+      
+
+      <h3 
+        local-class="category" 
+        data-test-portfolio-category
+      >
+        Type: {{portfolio.attributes.category}}
+      </h3>
+
+      <span 
+        local-class="description" 
+        data-test-portfolio-description
+      >
+        {{portfolio.attributes.description}}
+      </span>
+    </div>
+  {{/link-to}}
 </li>

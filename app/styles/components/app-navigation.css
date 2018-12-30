@@ -20,6 +20,8 @@
   padding: 1rem;
   box-sizing: border-box;
   position: relative;
+  font-weight: 300;
+  text-transform: uppercase;
 
   &::before {
     content: "";

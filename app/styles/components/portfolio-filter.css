@@ -3,7 +3,7 @@
 
 .manager {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin: 1rem;
 
   @media bp-sm {

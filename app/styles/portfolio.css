@@ -1,13 +1,10 @@
-@value txt-medium, txt-large, txt-huge from "./_base/typography.css";
+@value txt-small, txt-medium, txt-large, txt-huge from "./_base/typography.css";
 @value bp-sm, bp-lg from "./_utils/breakpoints.css";
 
 .header {
   background-color: #f1f1f1;
-  padding: 1rem;
+  padding: 1.5rem;
 
-  @media bp-sm {
-    padding: 2rem;
-  }
   @media bp-lg {
     padding: 3rem;
   }
@@ -41,4 +38,10 @@
     max-width: 50%;
     font-size: txt-huge;
   }
+}
+.latest {
+  margin-top: 1.5rem;
+  font-size: txt-small;
+  text-align: center;
+  font-weight: 700;
 }
