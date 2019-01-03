@@ -1,9 +1,27 @@
-@value txt-tiny, txt-small, txt-default from "../_base/typography.css";
+@value txt-minute, txt-tiny, txt-small, txt-default from "../_base/typography.css";
 @value centered from "../_composes/layout.css";
+@value bp-sm from "../_utils/breakpoints.css";
+@value color-primary, color-secondary from "../_base/colors.css";
 
+.item {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
+              0 3px 1px -2px rgba(0,0,0,0.12), 
+              0 1px 5px 0 rgba(0,0,0,0.2);
+
+  @media bp-sm {
+    border-radius: .25rem;
+  }
+}
 .header {
   display: flex;
-  padding: 1rem;
+  padding: .5rem 1rem;
+}
+.client {
+  font-size: txt-tiny;
+}
+.title {
+  font-size: txt-small;
+  font-weight: 700;
 }
 .avatar {
   composes: centered;
@@ -11,25 +29,24 @@
   height: 2.5rem;
   border-radius: 50%;
   margin-right: .5rem;
-  background-color: lightgreen;
+  background-color: color-primary;
+  color: color-secondary;
 }
-.data {
+.headerinfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
-.client {
-  font-size: txt-tiny;
+.date {
+  font-size: txt-minute;
+  color: #b7b7b7;
 }
-.title {
-  font-size: txt-small;
-  font-weight: 400;
-}
-.tools {
-  display: flex;
-}
-.tool {
-  font-size: txt-small;
+.imgcontainer {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 1280x720px (hd video 16:9) */
+  background-color: #f1f1f1;
 }
 .img {
   width: 100%;
@@ -39,11 +56,40 @@
   grid-row-gap: 1rem;
   padding: 1rem;
 }
-
-.title {}
-
-
-
-.category {}
-
-.description {}
+.tools {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-size: txt-tiny;
+  font-weight: 300;
+  margin-bottom: .25rem;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tool {
+  display: inline-block;
+  font-size: txt-tiny;
+  background-color: color-primary;
+  color: color-secondary;
+  border-radius: .25rem;
+  padding: .25rem .5rem;
+  margin-right: .25rem;
+  margin-top: .25rem;
+}
+.description {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  @supports (-webkit-line-clamp: 2) {
+    text-overflow: initial;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

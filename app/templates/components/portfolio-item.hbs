@@ -5,11 +5,11 @@
   {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
     <header local-class="header">
 
-      <div local-class="avatar">
+      <span local-class="avatar">
         {{clientInitial}}
-      </div>
+      </span>
 
-      <div local-class="data">
+      <section local-class="headerinfo">
         <span 
           local-class="client" 
           data-test-portfolio-client
@@ -23,45 +23,66 @@
         >
           {{portfolio.attributes.title}}
         </h1>
-      </div>
+      </section>
+
+      <span local-class="date">
+        {{fa-icon "calendar"}}
+        {{portfolio.attributes.date}}
+      </span>
     </header>
 
-    <img 
-      src={{portfolio.attributes.imageUrl}} 
-      alt={{portfolio.attributes.imageAlt}} 
-      local-class="img"
-      data-test-portfolio-image
-    >
+    <section local-class="imgcontainer">
+      <img 
+        src={{portfolio.attributes.imageUrl}} 
+        alt={{portfolio.attributes.imageAlt}} 
+        local-class="img"
+        data-test-portfolio-image
+      >
+    </section>
 
     <div local-class="content">
-
       <section local-class="tools">
-        {{#each portfolio.attributes.tools as |tool|}}
-          <h2 
-            local-class="tool"
-            data-test-portfolio-tools
-          >
-            {{tool}}
-          </h2>
-        {{/each}}
+        <h2 local-class="label">
+          Tools:
+        </h2>
+
+        <ul local-class="list">
+          {{#each portfolio.attributes.tools as |tool|}}
+            <li 
+              local-class="tool"
+              data-test-portfolio-tools
+            >
+              {{fa-icon "tags"}}
+              {{tool}}
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+
+      <section 
+        local-class="description" 
+        data-test-portfolio-description
+      >
+        <h2 local-class="label">
+          Description:
+        </h2>
+
+        <span local-class="description">
+          {{portfolio.attributes.description}}
+        </span>
       </section>
       
 
       
 
-      <h3 
+      {{!-- <h3 
         local-class="category" 
         data-test-portfolio-category
       >
         Type: {{portfolio.attributes.category}}
-      </h3>
+      </h3> --}}
 
-      <span 
-        local-class="description" 
-        data-test-portfolio-description
-      >
-        {{portfolio.attributes.description}}
-      </span>
+      
     </div>
   {{/link-to}}
 </li>

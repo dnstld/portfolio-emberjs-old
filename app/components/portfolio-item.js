@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import { computed } from '@ember/object';
 import { readOnly } from '@ember/object/computed';
 
 export default Component.extend({
@@ -9,5 +9,5 @@ export default Component.extend({
   clientInitial: computed('client', function() {
     let { client } = this; 
     return client.substring(0, 1);
-  }),
+  }).readOnly(),
 });
