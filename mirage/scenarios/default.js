@@ -31,7 +31,7 @@ export default function(server) {
 
   server.create('portfolio', {
     "type": "portfolio",
-    "id": "logo-stampowl-2017-03",
+    "id": "design-logo-stampowl-2017-03",
     "attributes": {
       "client": "Stampowl",
       "title": "Design",

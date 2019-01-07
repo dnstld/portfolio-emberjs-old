@@ -2,7 +2,12 @@
   local-class="item" 
   data-test-portfolio-item
 >
-  {{#link-to "portfolio.show" portfolio data-test-portfolio-link=portfolio.id}}
+  {{#link-to 
+    "portfolio.show" 
+    portfolio 
+    data-test-portfolio-link=portfolio.id
+    local-class="link"
+  }}
     <header local-class="header">
 
       <span local-class="avatar">
