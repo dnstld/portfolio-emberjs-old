@@ -51,7 +51,7 @@ module('Acceptance | portfolio list', function(hooks) {
 
     assert.ok(
       findAll(
-        '[data-test-portfolio-item]',
+        '[data-test-portfolio-itemhauhau]',
         'should display 3 portfolio'
       )
     );
@@ -61,12 +61,12 @@ module('Acceptance | portfolio list', function(hooks) {
   });
 
   skip('should show details for a selected work', async function(assert) {
-    await visit('/portfolio');
-    await click('[data-test-portfolio-link="ux-ui-front-end-instituto-assistir-2018-12"]');
+    await visit('/');
+    await click('[data-test-portfolio-link="ux-campainha-2018-11"]');
 
     assert.equal(
       currentURL(),
-      '/portfolio/ux-ui-front-end-instituto-assistir-2018-12',
+      '/portfolio/ux-campainha-2018-11',
       'should navigate to show route'
     )
   });

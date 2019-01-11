@@ -1,30 +1,28 @@
-{
-  "portfolio": [
-    {
-      "id": "design-logo-attitude-nutrition-2017-05",
-      "attributes": {
-        "client": "Attitude Nutrition",
-        "title": "Logo design",
-        "date": "May 2018",
-        "tools": ["Illustrator"],
-        "category": ["design"],
-        "description": "Logo design for a fight gym academia. Created using Adobe Illustrator.",
-        "imageUrl": "./assets/images/portfolio-1.jpg",
-        "imageAlt": "Consequuntur architecto est inventore"
-      }
-    },
-    {
-      "id": "design-logo-stampowl-2017-03",
-      "attributes": {
-        "client": "Stampowl",
-        "title": "Logo design",
-        "date": "May 2018",
-        "tools": ["Illustrator"],
-        "category": ["design"],
-        "description": "Logo design for a personalized gifts company. Created using Adobe Illustrator.",
-        "imageUrl": "./assets/images/portfolio-1.jpg",
-        "imageAlt": "Consequuntur architecto est inventore"
-      }
+[
+  {
+    "id": "design-logo-attitude-nutrition-2017-05",
+    "attributes": {
+      "client": "Attitude Nutrition",
+      "title": "Logo design",
+      "date": "May 2018",
+      "tools": ["Illustrator"],
+      "category": ["design"],
+      "description": "Logo design for a fight gym academia. Created using Adobe Illustrator.",
+      "imageUrl": "./assets/images/portfolio-1.jpg",
+      "imageAlt": "Consequuntur architecto est inventore"
     }
-  ]
-}
+  },
+  {
+    "id": "design-logo-stampowl-2017-03",
+    "attributes": {
+      "client": "Stampowl",
+      "title": "Logo design",
+      "date": "May 2018",
+      "tools": ["Illustrator"],
+      "category": ["design"],
+      "description": "Logo design for a personalized gifts company. Created using Adobe Illustrator.",
+      "imageUrl": "./assets/images/portfolio-1.jpg",
+      "imageAlt": "Consequuntur architecto est inventore"
+    }
+  }
+]

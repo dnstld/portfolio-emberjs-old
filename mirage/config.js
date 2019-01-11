@@ -8,7 +8,7 @@ export default function() {
       let foundPortfolio = portfolios.all();
 
       foundPortfolio.models = foundPortfolio.models.filter(item => {
-        return item.attributes.category === queryParams.category;
+        return item.attributes.category.includes(queryParams.category);
       });
 
       return foundPortfolio;
